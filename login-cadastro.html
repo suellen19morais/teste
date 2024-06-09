@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e cadastro</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #0000ff, #ff00c8);
+            height: auto;
+        }
+
+        .formulario-container {
+            margin: 0 auto;
+            margin-top: 60px;
+            margin-bottom: 100px;
+            background-color: whitesmoke;
+            padding: 6px;
+            width: 350px;
+            height: 650px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 20px 0 darkgrey;
+        }
+
+        form {
+            position: absolute;
+            margin-top: 80px;
+            transition: .5s;
+            width: 300px;
+            height: 600px;
+        }
+
+        .formulario-btn-container {
+            margin-top: 40px;
+            position: relative;
+            border-radius: 30px;
+            box-shadow: 0 0 7px 0 #010175;
+        }
+
+        .formulario-btn-container button {
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            position: relative;
+            padding: 10px 29px;
+        }
+
+        .btn-color {
+            position: absolute;
+            width: 115px;
+            height: 100%;
+            background: linear-gradient(to right, #0000f1,  #ff00c8);
+            border-radius: 30px;
+            transition: .3s;
+        }
+
+        #btn-login, #btn-cadastro {
+            transition: 0.5s;
+        }
+
+        input[type="text"], input[type="password"] {
+            border: none;
+            margin-top: 40px;
+            border-radius: 60px;
+            padding: 8px 0 8px 35px;
+            outline: none;
+            width: 100%;
+        }
+
+        button[type="submit"] {
+            background: #010175;
+            color: white;
+            border-radius: 30px;
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 8px 0 8px 15px;
+            font-size: 15px;
+            margin-top: 40px;
+            cursor: pointer;
+        }
+
+        .divCheck {
+            margin: 10px 0 0 5px;
+            width: 80%;
+            font-size: 13px;
+        }
+
+        #formulario-login {
+            left: 25px;
+        }
+
+        #formulario-cadastro {
+            left: 450px;
+        }
+
+        .campo-genero {
+            border-radius: 10px;
+            background-color: white;
+            margin-top: 20px;
+        }
+
+        #input-idade {
+            margin-top: 20px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="formulario-container">
+        <div class="formulario-btn-container">
+          <div class="btn-color"></div>
+          <button id="btn-login">Entra</button>
+          <button id="btn-cadastro">Cadastre-se</button>
+        </div>
+    
+        <form id="formulario-login">
+          <input type="text" placeholder="Email" required />
+          <i class="fas fa-envelope iEmail"></i>
+          <input type="password" placeholder="Senha" required />
+          <i class="fas fa-lock iPassword"></i>
+          <div class="divCheck">
+            <input type="checkbox" />
+            <span>lembrar senha</span>
+          </div>
+          <button type="submit">Entra</button>
+        </form>
+    
+        <form id="formulario-cadastro">
+            
+            <input id="input-nome" type="text" placeholder="Nome" required>
+            <input id="input-email" type="text" placeholder="Email" required>
+            <input id="input-senha" type="text" placeholder="Senha" required>
+            <input id="input-telefone" type="text" placeholder="Telefone" required>
+            <fieldset class="campo-genero">
+                <legend>Gênero</legend>
+                <input type="radio" id="masculino">
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="feminino">
+                <label for="feminino">Feminino</label>
+                <input type="radio" id="outros">
+                <label for="outros">Outros</label>
+            </fieldset>
+            <input id="input-idade" type="date" required>
+          <div class="divCheck">
+            <input type="checkbox" required />
+            <span>Termos</span>
+          </div>
+          <button type="submit">Cadastra</button>
+        </form>
+    </div>
+    <nav>
+        <a href="index.html">Menu</a> 
+        <a href="inicial/aboutus.html">Catálogo</a>
+        <a href="carrinho.html">Carrinho</a> 
+        <a href="login-cadastro.html">Cadastro/login</a>
+        <a href="assinaturas.html">Assinaturas</a>
+        
+    </nav>
+    <script defer >
+        var formSignin = document.querySelector('#formulario-login');
+        var formSignup = document.querySelector('#formulario-cadastro');
+        var btnColor = document.querySelector('.btn-color');
+
+        document.querySelector('#btn-login')
+        .addEventListener('click', () => {
+            formSignin.style.left = "25px";
+            document.querySelector("#btn-login").style = "color: #FFF";
+            formSignup.style.left = "450px";
+            document.querySelector("#btn-cadastro").style = "color: #000";
+            btnColor.style.left = "0px";
+        })
+
+        document.querySelector('#btn-cadastro')
+        .addEventListener('click', () => {
+            formSignin.style.left = "-450px";
+            document.querySelector("#btn-login").style = "color: #000";
+            formSignup.style.left = "25px";
+            document.querySelector("#btn-cadastro").style = "color: #FFF";
+            btnColor.style.left = "110px";
+        })
+    </script>
+</body>
+</html>

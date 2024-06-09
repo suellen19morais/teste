@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Encanto das Páginas</title>
+        <meta name="viewport" content="width=device-width">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        
+        <link href="_css/estilo.css"            rel="stylesheet"/>
+        <link href="_css/mobile.css"            rel="stylesheet" media="screen and (min-width:300px) and (max-width:700px)">
+        <link href="_css/desktop-grande.css"    rel="stylesheet">
+    </head>
+    <body>      
+        <nav>
+            <img src="_img/Power_rangers__7_-removebg-preview.png">
+            <ul id="menu-desktop">
+                <li><a href="">MENU</a></li>
+                <li><a href="catalogo.html">CATÁLOGO</a></li>
+                <li><a href="carrinho.html">CARRINHO</a></li>
+                <li><a href="login-cadastro.html">CADASTRO/LOGIN</a></li>
+                <li><a href="assinaturas.html">ASSINATURAS</a></li>
+                
+
+              
+            </ul> 
+            
+            <ul id="menu-mobile">
+                <li><a href="">MENU</a></li>
+                <li><a href="catalogo.html">CATÁLOGO</a></li>
+                <li><a href="carrinho.html">CARRINHO</a></li>
+                <li><a href="login-cadastro.html">CADASTRO/LOGIN</a></li>
+                <li><a href="assinaturas.html">ASSINATURAS</a></li>
+               
+               
+            </ul> 
+            
+            <div id="menu-btn">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5"     stroke="#fff" stroke-width="4"/>
+                    <path d="M0,15 30,15"   stroke="#fff" stroke-width="4"/>
+                    <path d="M0,25 30,25"   stroke="#fff" stroke-width="4"/>
+                </svg>
+            </div>            
+        </nav>
+        
+        <header>
+
+        </header>
+        
+        <main>
+            <section id="apresentacao">
+                <section class="pizzas">
+                    <img src="_img/61z4-KJmq4L._AC_UF1000,1000_QL80_.jpg"width= "200px "height=250px>
+                    <h3>Rainha Charlotte</h3>
+                      <a href="">APENAS R$ 49,99</a>
+                </section>
+
+                <section class="pizzas centro">
+                    <img src="_img/618fXbK+OkL._AC_UF1000,1000_QL80_.jpg"width= "200px "height=250px >
+                    <h3>Crepúsculo</h3>
+                    <a href="">APENAS R$ 29,99</a>                    
+                </section>
+
+                <section class="pizzas direita">
+                    <img src="_img/61W8wfyiwzL._AC_UF1000,1000_QL80_.jpg"width= "200px "height=250px>
+                    <h3>Se a casa 8 falasse</h3>
+                    <a href="">APENAS R$ 39,99</a>                
+                </section> 
+         
+                <section class="pizzas direita">
+                    <img src="_img/513NSXK2nLL.jpg"width= "200px "height=250px>
+                    <h3>É assim que acaba</h3>
+                    <a href="">APENAS R$ 39,99</a>                
+                </section> 
+
+                <section class="pizzas direita">
+                    <img src="_img/61OrLIUYKgL._AC_UF1000,1000_QL80_.jpg"width= "200px "height=250px>
+                    <h3>História de uma alma</h3>
+                    <a href="">APENAS R$ 39,99</a>                
+                </section> 
+
+                <section class="pizzas direita">
+                    <img src="_img/71pLYx9AmRL._AC_UF1000,1000_QL80_.jpg"width= "200px "height=250px>
+                    <h3>Se a casa 8 falasse</h3>
+                    <a href="">APENAS R$ 39,99</a>                
+                </section> 
+
+            </section>
+        </main>        
+        
+        <script src="_js/jquery.js"></script>
+        <script>
+            $(function() {
+                $("div#menu-btn").click(function() {
+                    $("nav ul#menu-mobile").toggle();
+                });
+                
+                $(window).resize(function() {
+                   var largura = $(window).width(); 
+                    if ( largura >= 701 ) {
+                        $("nav ul#menu-mobile").hide();   
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
